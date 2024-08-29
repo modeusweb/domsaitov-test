@@ -1,0 +1,95 @@
+/* ===========================
+   Common Styles
+   =========================== */
+
+html {
+  font-size: var(--primary-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary-bg-color);
+  color: var(--primary-color);
+  font-family: var(--primary-font), sans-serif;
+  line-height: var(--primary-line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 clamp(24px, 2vw, 48px) 0;
+  line-height: var(--secondary-line-height);
+}
+
+h1 {
+  font-size: clamp(26px, 3vw, 50px);
+  letter-spacing: 0.0015em;
+}
+
+h2 {
+  font-size: var(--title-font-size);
+}
+
+h3 {
+  font-size: clamp(18px, 2vw, 32px);
+}
+
+h4 {
+  font-size: clamp(16px, 2vw, 28px);
+}
+
+p {
+  margin: 0 0 clamp(16px, 2vw, 31px) 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 400svh;
+  /*min-height: 100svh;*/
+  overflow: hidden;
+}
+
+.container {
+  box-sizing: content-box;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 2vw, 32px);
+}
+
+.main-area {
+  flex: 1 0 auto;
+}

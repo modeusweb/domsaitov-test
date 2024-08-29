@@ -1,0 +1,84 @@
+@import 'modules/_normalize.css';
+@import 'modules/_fonts.css';
+@import 'modules/_variables.css';
+@import 'modules/_common.css';
+@import 'modules/_components.css';
+
+/* ===========================
+   Header
+   =========================== */
+
+.header {
+  padding: 21px 0 22px;
+  background: var(--white-color);
+}
+
+.header__container {
+  max-width: 1720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  width: clamp(60px, 8vw, 113px);
+  height: clamp(60px, 8vw, 113px);
+  object-fit: contain;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 8vw, 136px);
+  transform: translateY(6px);
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px clamp(20px, 5vw, 78px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: var(--secondary-font-size);
+}
+
+.header__nav-item {
+  margin: 0;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.header__nav-link:hover,
+.header__nav-link.current {
+  color: var(--accent-color);
+}
+
+/* ===========================
+   Intro
+   =========================== */
+
+.intro {
+  padding: 34px 0 48px;
+  background: url('../img/intro-bg.webp') repeat 54% 42% var(--banner-bg-color);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.intro__title {
+  margin: 0;
+}
+
+.intro__title a {
+  text-underline-offset: 9px;
+  transition: none;
+}
