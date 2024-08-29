@@ -1,9 +1,7 @@
-import { fetchDescription } from './modules/fetchDescription.js';
-import { animateFlags } from './modules/flagsAnimation.js';
-import { burgerNav } from './modules/burgerNav.js';
+import { initWeightSlider } from './modules/weightSlider.js';
+import { handleTabs } from './modules/tabs.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // await fetchDescription();
-  // animateFlags();
-  // burgerNav();
+  // initWeightSlider();
+  // handleTabs();
 });

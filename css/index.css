@@ -1,3 +1,4 @@
+@import 'modules/_swiper.css';
 @import 'modules/_normalize.css';
 @import 'modules/_fonts.css';
 @import 'modules/_variables.css';
@@ -90,6 +91,7 @@
 .catalog {
   padding-top: clamp(47px, 7vw, 94px);
   padding-bottom: clamp(40px, 7vw, 80px);
+  background: var(--primary-bg-color);
 }
 
 .catalog__items {
@@ -131,4 +133,240 @@
 .banner__title {
   margin: 0 auto 0 0;
   letter-spacing: 0.026em;
+}
+
+/* ===========================
+   How Call
+   =========================== */
+
+.how-call {
+  padding: var(--primary-indent) 0 clamp(30px, 7vw, 55px);
+  background: var(--white-color);
+}
+
+.how-call__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: -5px;
+}
+
+.how-call__title {
+  margin-right: -1em;
+}
+
+.how-call__desc {
+  padding-right: 10px;
+}
+
+.how-call__img {
+  display: flex;
+  flex: 0 0 51%;
+  margin-top: -14px;
+  transform: translateX(38px);
+}
+
+.how-call__img img {
+  max-width: 100%;
+}
+
+/* ===========================
+   Need Know
+   =========================== */
+
+.need-know {
+  padding: var(--primary-indent) 0;
+  background: var(--secondary-bg-color);
+}
+
+.need-know__row {
+  display: flex;
+  gap: var(--large-gap);
+}
+
+.need-know__item {
+  flex: 1;
+}
+
+.need-know__item-img {
+  display: flex;
+  justify-content: center;
+  height: 305px;
+}
+
+.need-know__item-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.need-know__item-desc {
+  margin-top: clamp(15px, 3vw, 25px);
+}
+
+/* ===========================
+   Cost
+   =========================== */
+
+.cost {
+  padding: var(--primary-indent) 0;
+  background: var(--primary-bg-color);
+}
+
+.cost__info {
+  max-width: 1200px;
+}
+
+.cost__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--middle-gap);
+  margin-top: 105px;
+}
+
+.cost__item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.cost__item-icon {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  padding: 12px;
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  top: -73px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+.cost__item-icon img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 3;
+}
+
+.cost__item-body {
+  flex: 1;
+  padding: 32px 20px 28px;
+  position: relative;
+  z-index: 2;
+  border-radius: var(--primary-border-radius);
+  background: var(--accent-color);
+  font-size: var(--middle-font-size);
+}
+
+.cost__item-title {
+  font-size: var(--secondary-font-size);
+  font-weight: bold;
+}
+
+.cost__item-desc {
+  line-height: 1.17;
+  margin-top: 17px;
+}
+
+/* ===========================
+   Advantages
+   =========================== */
+
+.advantages {
+  min-height: 70vh;
+  background: var(--white-color);
+}
+
+/* ===========================
+   Weight
+   =========================== */
+
+.weight {
+  min-height: 70vh;
+  background: var(--primary-bg-color);
+}
+
+/* ===========================
+   Instruction
+   =========================== */
+
+.instruction {
+  min-height: 70vh;
+  background: var(--secondary-bg-color);
+}
+
+/* ===========================
+   Info
+   =========================== */
+
+.info {
+  min-height: 70vh;
+  background: var(--primary-bg-color);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+  min-height: 240px;
+  padding: var(--large-gap) 0;
+  background: var(--banner-bg-color);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-img {
+  width: clamp(60px, 8vw, 113px);
+  height: clamp(60px, 8vw, 113px);
+  object-fit: contain;
+}
+
+.footer__nav {
+  display: flex;
+  flex: 1;
+  transform: translateY(4px);
+}
+
+.footer__nav-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px clamp(10px, 4vw, 65px);
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: clamp(12px, 5vw, 16px);
+}
+
+.footer__nav-item {
+  margin: 0;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.footer__nav-link:hover,
+.footer__nav-link.current {
+  color: var(--accent-color);
 }
