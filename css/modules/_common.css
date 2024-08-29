@@ -36,7 +36,9 @@ h2 {
 }
 
 h3 {
+  margin-bottom: clamp(14px, 2vw, 31px);
   font-size: clamp(18px, 2vw, 32px);
+  line-height: 1.1;
 }
 
 h4 {
@@ -73,6 +75,11 @@ button {
   background: none;
   cursor: pointer;
   transition: 0.3s;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .page-wrapper {
