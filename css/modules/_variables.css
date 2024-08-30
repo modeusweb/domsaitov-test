@@ -6,6 +6,7 @@
   --title-font-size: clamp(22px, 3vw, 40px);
   --middle-font-size: clamp(12px, 2vw, 18px);
   --small-font-size: clamp(8px, 2vw, 12px);
+  --label-font-size: clamp(12px, 2vw, 22px);
   --primary-line-height: 1.193;
   --secondary-line-height: 1.2;
 
@@ -19,6 +20,7 @@
   --btn-color-hover: #35acdd;
   --btn-color-active: #077aa9;
   --btn-color-disabled: #b3c8d1;
+  --form-color: #4a585e;
   --primary-bg-color: #f3f6f9;
   --secondary-bg-color: #fff5cc;
   --banner-bg-color: #586c75;
@@ -31,7 +33,7 @@
   --secondary-gap: clamp(14px, 3vw, 28px);
   --middle-gap: clamp(12px, 3vw, 24px);
   --large-gap: clamp(20px, 3vw, 40px);
-  --small-gap: clamp(6px, 3vw, 12px);
+  --small-gap: clamp(6px, 1.5vw, 12px);
   --primary-padding: clamp(8px, 2vw, 16px) clamp(10px, 2vw, 20px);
   --secondary-padding: clamp(16px, 3vw, 48px);
   --large-padding: clamp(20px, 3vw, 60px);

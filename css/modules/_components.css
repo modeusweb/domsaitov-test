@@ -39,6 +39,16 @@
   flex: 0 0 clamp(16px, 2vw, 24px);
 }
 
+.btn--border {
+  border: 2px solid var(--accent-color);
+  background: var(--primary-bg-color);
+  color: var(--accent-color);
+}
+
+.btn--border:hover {
+  color: var(--white-color);
+}
+
 /* ===========================
    Card
    =========================== */
@@ -316,6 +326,116 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* ===========================
+   Form
+   =========================== */
+
+.input-group {
+  margin-bottom: clamp(14px, 3vw, 26px);
+}
+
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--small-gap);
+  font-size: var(--label-font-size);
+  line-height: 1.3em;
+  color: var(--form-color);
+}
+
+.select,
+.input {
+  display: block;
+  width: 100%;
+  height: clamp(42px, 5vw, 56px);
+  padding: 5px 20px 8px;
+  border: var(--primary-border);
+  border-radius: var(--secondary-border-radius);
+  background: var(--white-color);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 17px;
+  top: 50%;
+  margin-top: -12px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSIjMDI5N0Q0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTIwIDEwLjUtOCA4LTgtOCIvPjwvc3ZnPg==);
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.input::placeholder {
+  color: #b3c8d1;
+}
+
+.input--textarea {
+  height: clamp(200px, 30vw, 346px);
+  padding-top: 11px;
+  padding-bottom: 11px;
+  resize: none;
+}
+
+.checkbox-label {
+  display: block;
+  position: relative;
+  font-size: var(--label-font-size);
+  color: var(--form-color);
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.checkbox-label input[type='checkbox'] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkbox-label span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox-label span:before {
+  content: '';
+  display: block;
+  width: 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  border: var(--primary-border);
+  border-radius: 4px;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-color: var(--white-color);
+  background-size: 16px 11px;
+}
+
+.checkbox-label input[type='checkbox']:checked + span:before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxMC4zNiI+PHBhdGggZmlsbD0iIzAyOTdkNCIgZD0ibTYuMzEgMTAuMzYtNi01LjUxYTEgMSAwIDAgMS0uMDUtMS40MiAxIDEgMCAwIDEgMS40Mi0uMDVsNC42MyA0LjI2IDgtNy4zOGExIDEgMCAwIDEgMS40Mi4wNiAxIDEgMCAwIDEtLjA2IDEuNDJaIi8+PC9zdmc+);
 }
 
 /* ===========================

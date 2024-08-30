@@ -518,6 +518,132 @@
 }
 
 /* ===========================
+   Creation
+   =========================== */
+
+.creation {
+  padding: clamp(20px, 4vw, 60px) 0 clamp(40px, 4vw, 80px);
+}
+
+.creation__headline {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 1250px;
+  margin-bottom: var(--large-padding);
+}
+
+.creation__headline-icon {
+  display: flex;
+  flex: 0 0 104px;
+  transform-origin: left bottom;
+}
+
+.creation__headline-icon img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.creation__form-inner {
+  max-width: 798px;
+  margin: 0 auto;
+}
+
+.creation__form-title {
+  margin: clamp(26px, 4vw, 53px) auto;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--form-color);
+  overflow: hidden;
+}
+
+.creation__form-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--accent-color);
+}
+
+.creation__form-title span {
+  display: inline-flex;
+  max-width: 80%;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  background: var(--primary-bg-color);
+}
+
+.creation__form-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(14px, 3vw, 26px);
+}
+
+.creation__form-price:last-child {
+  margin-bottom: 0;
+}
+
+.creation__form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.creation__form-price .input-group {
+  max-width: 322px;
+  margin: 0;
+}
+
+.creation__form-row > .label {
+  margin: 0;
+  transform: translateY(55%);
+}
+
+.creation__form-price .checkbox-label {
+  transform: translateY(55%);
+}
+
+.creation__form-attach {
+  position: relative;
+}
+
+.creation__form-attach .label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.creation__form-attach .btn {
+  width: 100%;
+  max-width: 335px;
+}
+
+.creation__form-confirm {
+  margin-top: var(--large-padding);
+}
+
+.creation__form-confirm span {
+  align-items: flex-start;
+}
+
+.creation__form-submit {
+  display: flex;
+  width: 100%;
+  max-width: 335px;
+  margin: var(--middle-gap) auto 0;
+}
+
+/* ===========================
    Footer
    =========================== */
 
@@ -725,6 +851,22 @@
   }
   .advantages__tiles {
     flex-direction: column;
+  }
+  .creation__headline {
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 10px;
+  }
+  .creation__headline-icon {
+    transform: scale(0.8);
+  }
+  .creation__form-price {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .creation__form-price .input-group {
+    max-width: none;
+    width: 100%;
   }
   .footer__nav-list {
     flex-direction: column;
