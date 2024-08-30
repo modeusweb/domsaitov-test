@@ -198,3 +198,122 @@
 .pagination__item--next .icon {
   transform: translateX(2px) scaleX(1);
 }
+
+/* ===========================
+   Tabs
+   =========================== */
+
+.tabs__btns {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tabs__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 52px;
+  position: relative;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: clamp(16px, 2vw, 32px);
+  border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+  transition: none;
+}
+
+.tabs__btn--active {
+  background: var(--white-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.tabs__btn--active:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: -10px;
+  height: 20px;
+  background: var(--white-color);
+  pointer-events: none;
+}
+
+.tabs__btn--active:not(:first-child):after {
+  left: -10px;
+}
+
+.tabs__panels {
+  padding: var(--secondary-padding) var(--large-padding) var(--large-padding);
+  border-radius: var(--primary-border-radius);
+  background: var(--white-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.tabs__panel {
+  display: none;
+  margin-top: -2px;
+  padding-left: 3px;
+  padding-right: 5px;
+}
+
+.tabs__panel--active {
+  display: block;
+}
+
+.tabs__panel h2 {
+  margin-bottom: var(--primary-gap);
+}
+
+.tabs__panel h5 {
+  margin-bottom: var(--secondary-gap);
+}
+
+.tabs__panel ul {
+  padding-top: 1px;
+}
+
+.tabs__panel li:not(:last-child) {
+  margin-bottom: clamp(10px, 3vw, 16px);
+  padding-bottom: 0;
+}
+
+.tabs__panel ol li:not(:last-child) {
+  margin-bottom: var(--middle-gap);
+  padding-bottom: 0;
+}
+
+/* ===========================
+   To top button
+   =========================== */
+
+.to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 35px;
+  right: 73px;
+  width: 44px;
+  height: 44px;
+  border: var(--primary-border);
+  color: var(--accent-color);
+  border-radius: 8px;
+  background: var(--white-color);
+  z-index: 100;
+  opacity: 0.6;
+}
+
+.to-top svg {
+  width: 14px;
+  height: 26px;
+}
+
+.to-top:hover {
+  opacity: 1;
+}
+
+.to-top--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

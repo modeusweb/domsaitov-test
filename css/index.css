@@ -42,6 +42,7 @@
 
 .header__nav-list {
   display: flex;
+  align-items: center;
   gap: 20px clamp(16px, 5vw, 78px);
   margin: 0;
   padding: 0;
@@ -52,6 +53,11 @@
 
 .header__nav-item {
   margin: 0;
+  padding: 0;
+}
+
+.header__nav-item:before {
+  display: none;
 }
 
 .header__nav-link {
@@ -132,7 +138,6 @@
 
 .banner__title {
   margin: 0 auto 0 0;
-  letter-spacing: 0.026em;
 }
 
 /* ===========================
@@ -280,8 +285,52 @@
    =========================== */
 
 .advantages {
-  min-height: 70vh;
+  padding: var(--primary-indent) 0;
   background: var(--white-color);
+}
+
+.advantages__container {
+  margin-top: -5px;
+}
+
+.advantages__desc {
+  max-width: 805px;
+  margin-bottom: var(--secondary-indent);
+}
+
+.advantages__row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.advantages__content {
+  flex: 1;
+  margin-right: -1em;
+}
+
+.advantages__img {
+  display: flex;
+  flex: 0 0 49%;
+  transform: translate(53px, -44px);
+}
+
+.advantages__img img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.advantages__tiles {
+  display: flex;
+  gap: var(--primary-gap);
+  margin-top: clamp(35px, 4vw, 70px);
+  margin-bottom: -263px;
+}
+
+.advantages__tile {
+  flex: 1;
+  padding: var(--secondary-padding);
+  border-radius: var(--primary-border-radius);
+  background: var(--secondary-bg-color);
 }
 
 /* ===========================
@@ -289,8 +338,65 @@
    =========================== */
 
 .weight {
-  min-height: 70vh;
+  padding: clamp(130px, 20vw, 263px) 0 calc(var(--primary-indent) + 44px);
   background: var(--primary-bg-color);
+}
+
+.weight__desc {
+  max-width: 1250px;
+  margin-bottom: calc(var(--primary-gap) + 1px);
+}
+
+.weight__slider-box {
+  margin: -10px;
+  position: relative;
+}
+
+.weight__slider {
+  padding: 10px;
+  opacity: 0;
+}
+
+.weight__slider.swiper-initialized {
+  opacity: 1;
+}
+
+.weight__item {
+  height: auto;
+  padding: var(--large-gap);
+  background: var(--white-color);
+  border-radius: var(--primary-border-radius);
+  font-size: var(--secondary-font-size);
+  line-height: 1.143;
+}
+
+.weight__item.swiper-slide-visible {
+  box-shadow: var(--primary-box-shadow);
+}
+
+.weight__item-title {
+  font-weight: bold;
+}
+
+.weight__item-img {
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 53.35%;
+  overflow: hidden;
+}
+
+.weight__item-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.weight__item-desc {
+  margin-top: 20px;
+  line-height: 1.2;
 }
 
 /* ===========================
@@ -298,8 +404,63 @@
    =========================== */
 
 .instruction {
-  min-height: 70vh;
   background: var(--secondary-bg-color);
+}
+
+.instruction__row {
+  position: relative;
+}
+
+.instruction__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.instruction__content {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 76px 56px 30px 0;
+}
+
+.instruction__title {
+  margin-bottom: var(--secondary-indent);
+}
+
+.instruction__desc p {
+  margin-bottom: var(--middle-gap);
+}
+
+.instruction__img {
+  flex: 1;
+}
+
+.instruction__img img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instruction__row:nth-child(even) .instruction__img {
+  order: -1;
+}
+
+.instruction__row:nth-child(even) .instruction__img img {
+  left: 0;
+  object-position: right center;
+}
+
+.instruction__row:nth-child(even) .instruction__content {
+  padding-top: 56px;
+  padding-left: 56px;
+  padding-right: 10px;
+}
+
+.instruction__row:nth-child(even) .instruction__desc p {
+  margin-bottom: var(--secondary-gap);
+  font-weight: 500;
 }
 
 /* ===========================
@@ -307,8 +468,12 @@
    =========================== */
 
 .info {
-  min-height: 70vh;
+  padding: var(--primary-indent) 0;
   background: var(--primary-bg-color);
+}
+
+.info__container {
+  margin-top: 5px;
 }
 
 /* ===========================
@@ -347,6 +512,7 @@
 
 .footer__nav-list {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 12px clamp(10px, 4vw, 65px);
   flex: 1;
@@ -359,6 +525,11 @@
 
 .footer__nav-item {
   margin: 0;
+  padding: 0;
+}
+
+.footer__nav-item:before {
+  display: none;
 }
 
 .footer__nav-link {
