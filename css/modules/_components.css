@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 15px 36px 17px;
+  padding: clamp(10px, 2vw, 15px) clamp(18px, 3vw, 36px) clamp(10px, 2vw, 17px);
   border: none;
   font-size: var(--secondary-font-size);
   line-height: 1.2;
@@ -44,7 +44,7 @@
    =========================== */
 
 .card {
-  padding: clamp(20px, 3vw, 40px) clamp(24px, 3vw, 48px);
+  padding: clamp(20px, 3vw, 40px) clamp(16px, 3vw, 48px);
   border-radius: var(--primary-border-radius);
   background: var(--white-color);
   box-shadow: var(--primary-box-shadow);
@@ -316,4 +316,51 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* ===========================
+   Media Queries | Responsive
+   =========================== */
+
+@media (max-width: 1499px) {
+  .to-top {
+    right: var(--primary-gap);
+    bottom: var(--primary-gap);
+  }
+}
+
+@media (max-width: 1023px) {
+  .card__cols {
+    flex-wrap: wrap;
+  }
+  .card__img {
+    order: 1;
+    flex: 1;
+  }
+  .card__contacts {
+    order: 2;
+    flex: 1;
+  }
+  .card__params {
+    order: 3;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabs__btn {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .card__img {
+    padding-bottom: 79%;
+  }
+  .card__img,
+  .card__contacts {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

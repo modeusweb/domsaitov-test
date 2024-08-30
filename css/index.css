@@ -10,8 +10,10 @@
    =========================== */
 
 .header {
+  position: relative;
   padding: 21px 0 22px;
   background: var(--white-color);
+  z-index: 101;
 }
 
 .header__container {
@@ -68,6 +70,45 @@
 .header__nav-link:hover,
 .header__nav-link.current {
   color: var(--accent-color);
+}
+
+.header__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  height: 24px;
+  position: relative;
+  color: var(--accent-color);
+}
+
+.header__burger:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+}
+
+.header__burger svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+.header__burger-close {
+  transform: scale(0);
+}
+
+.header__burger--opened svg.header__burger-open {
+  transform: scale(0);
+}
+.header__burger--opened svg.header__burger-close {
+  transform: scale(1);
 }
 
 /* ===========================
@@ -131,8 +172,8 @@
 }
 
 .banner__icon-img {
-  width: 210px;
-  height: 121px;
+  width: clamp(105px, 15vw, 210px);
+  height: clamp(60px, 15vw, 121px);
   object-fit: contain;
 }
 
@@ -513,14 +554,14 @@
 .footer__nav-list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 12px clamp(10px, 4vw, 65px);
   flex: 1;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
   list-style: none;
   text-transform: uppercase;
-  font-size: clamp(12px, 5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .footer__nav-item {
@@ -540,4 +581,154 @@
 .footer__nav-link:hover,
 .footer__nav-link.current {
   color: var(--accent-color);
+}
+
+/* ===========================
+   Media Queries | Responsive
+   =========================== */
+
+@media (max-width: 1023px) {
+  .cost__items {
+    row-gap: 60px;
+  }
+  .cost__item {
+    min-width: 45%;
+  }
+  .cost__item-icon {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    margin-left: -60px;
+  }
+  .cost__item-icon img {
+    width: 60px;
+    height: 60px;
+  }
+  .advantages__tiles {
+    margin-bottom: 0;
+  }
+  .weight {
+    padding-top: var(--primary-indent);
+  }
+  .instruction {
+    padding: var(--primary-indent) 0;
+  }
+  .instruction__container {
+    display: block;
+  }
+  .instruction__content {
+    max-width: none;
+    padding: 0 !important;
+  }
+  .instruction__img {
+    margin: 30px 0;
+    text-align: center;
+  }
+  .instruction__img img {
+    position: static;
+    width: auto;
+    max-width: 100%;
+  }
+  .footer__container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 5px 0;
+  }
+  .header__logo {
+    position: relative;
+    z-index: 1;
+  }
+  .header__content {
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
+    padding: 16px;
+    background: var(--white-color);
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: 0.3s;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+  }
+  .header__content--opened {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  .header__nav-list {
+    flex-direction: column;
+  }
+  .intro {
+    padding: 24px 0;
+  }
+  .banner__container {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  .banner__title {
+    margin: 0;
+  }
+  .how-call__container {
+    flex-direction: column;
+  }
+  .how-call__title {
+    margin-right: 0;
+  }
+  .how-call__desc {
+    padding: 0;
+  }
+  .how-call__img {
+    flex: 1;
+    transform: none;
+    max-width: 500px;
+    margin: auto;
+  }
+  .need-know__row {
+    flex-direction: column;
+  }
+  .need-know__item-img {
+    height: 200px;
+  }
+  .cost__items {
+    margin-top: 75px;
+  }
+  .cost__item {
+    min-width: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .advantages__row {
+    flex-direction: column;
+  }
+  .advantages__img {
+    flex: 1;
+    transform: none;
+    max-width: 500px;
+    margin: 10px auto 0;
+  }
+  .advantages__tiles {
+    flex-direction: column;
+  }
+  .footer__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: var(--secondary-padding);
+  }
 }
